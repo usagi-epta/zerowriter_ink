@@ -1,9 +1,24 @@
-The commandline files includes rebuilding the partition structure, so they are generally better if the SD card updater isn't working. This means you will lose your saved settings in the menu.
+Why use the command line tool? It is kind of like a "Factory Reset" that will rebuild your Zerowriter Ink.
 
-Same as the web updater, to do this kind of command line update you will need to unplug your Zerowriter keyboard by opening it up.
+These files build a new partition structure, so they are useful if the built-in SD card updater isn't working. This means you will lose your saved settings in the menu.
 
-Download this folder and open it in terminal.
+To do this kind of command line update you will need to unplug your Zerowriter keyboard by opening it up. This is because the keyboard signal prevents the computer from sending the update data. You need to unplug the keyboard cable that is attached to the left side of the display. You can do so by carefully rocking it out.
 
-[ replace /dev/cu.usbserial-10 with your usb UART port via ls /dev/tty.* ]
+Once that is removed, turn on the Zerowriter Ink and connect it to your computer via USB cable.
+
+----
+
+On your computer, download this folder (firmware_releases) and open it in Terminal / command line.
+
+Enter this on the command line:
 
 esptool.py --chip esp32 -p /dev/cu.usbserial-10 write_flash 0x0000 zw_123.merged.bin  
+
+[ replace /dev/cu.usbserial-10 with your usb UART port (find it via ls /dev/tty.* ) ]
+[ replace zw_123.merged.bin with the name of the binary file ]
+
+----
+
+If you need esptool, you can install it: 
+
+python3 -m pip install --user esptool
