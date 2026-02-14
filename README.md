@@ -2,7 +2,7 @@
 
 General repo for all things Zerowriter Ink.
 
-Note that the current public firmware is 1.1. If you are using a factory Zerowriter Ink, you may experience some bugs.
+Note that the current public firmware is 1.30. If you are using a factory Zerowriter Ink, you may experience some bugs.
 
 For those field testing or using new units, consider opening an issue if you find bugs. You can do that here: (https://github.com/zerowriter/zerowriter_ink/issues)
 
